@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<title>Ad Template — Market & Zalo Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ---- ZAD DS tokens (mirror of deck hiện tại) ---- */
+  --zad-bg:#FFFFFF; --zad-ink:#172B4D; --zad-ink2:#42526E;
+  --zad-blue:#008FE5; --zad-line:#E0E0E0;
+  --g100:#F9F9F9; --g200:#F2F2F2; --g300:#E0E0E0; --g500:#9E9E9E; --g600:#6B6B6B;
+  --r4:4px; --r8:8px; --r12:12px; --r16:16px; --pill:999px;
+  --fs300:12px; --fs325:13px; --fs350:14px; --fs400:16px; --fs450:18px;
+  --fs500:20px; --fs600:24px; --fs650:28px; --fs800:32px; --fs900:36px; --fs1000:40px;
+  /* ---- semantic ---- */
+  --ink:var(--zad-ink); --muted:var(--g600); --faint:var(--g500);
+  --line:var(--zad-line); --accent:var(--zad-blue); --bg:var(--zad-bg);
+  --warn-bg:#FFF8E6; --warn-line:#E8C65A; --warn-ink:#6B5300;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --maxw:1180px; --shadow:0 10px 30px rgba(23,43,77,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.page-shell{display:grid;grid-template-columns:minmax(0,1fr) 184px;grid-template-rows:auto;gap:16px;align-items:start;max-width:calc(var(--maxw) + 216px);margin:0 auto;padding:0 16px}
+.page-content{grid-column:1;grid-row:1;min-width:0}
+
+/* ---- sticky navigation rail ---- */
+.nav{position:sticky;top:20px;grid-column:2;grid-row:1;align-self:start;z-index:50;width:100%;margin-top:120px;opacity:.58;background:transparent;border:0;box-shadow:none;transition:opacity .18s ease}
+.nav:hover,.nav:focus-within{opacity:.96}
+.nav .wrap{display:block;height:auto;padding:12px 8px}
+.nav .brand{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line);font-weight:800;font-size:var(--fs300);letter-spacing:.08em;text-transform:uppercase}
+.nav .brand b{color:var(--accent)}
+.nav .links{display:grid;gap:9px;margin:0}
+.nav-group{display:grid;gap:2px}
+.nav-main,.nav-sub{display:block;border-radius:var(--r4);color:var(--muted);text-decoration:none;transition:color .16s ease,background-color .16s ease,font-weight .16s ease}
+.nav-main{padding:5px 7px;font-size:var(--fs325);font-weight:700;letter-spacing:.02em}
+.nav-sub{padding:4px 7px 4px 18px;font-size:var(--fs300);font-weight:500;line-height:1.3}
+.nav a:hover,.nav a:focus-visible{background:var(--g200);color:var(--ink);font-weight:800;outline:none}
+.nav a[aria-current="true"]{color:var(--accent);font-weight:800}
+.nav-group:has(.nav-sub[aria-current="true"]) .nav-main{color:var(--accent);font-weight:800}
+
+/* ---- section scaffold ---- */
+section{padding:92px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:none}
+#scope,#s03,#s04,#s05,#zalo-templates,#performance,#zalo,#rec,#rec-form-question,#rec-carousel,#rec-comparison{scroll-margin-top:28px}
+.eyebrow{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+.eyebrow .no{font-weight:900;font-size:var(--fs325);letter-spacing:.14em;color:var(--accent)}
+.eyebrow .kic{font-weight:600;font-size:var(--fs325);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.eyebrow .rule{display:none}
+.h-title{font-weight:900;font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.03em;margin:0 0 14px}
+.subsection .eyebrow .no,.subsection .eyebrow .kic{font-size:var(--fs300)}
+.subsection .h-title{font-size:clamp(28px,3.5vw,42px);line-height:1.08}
+#scope .h-title{font-size:clamp(24px,2.6vw,32px);line-height:1.12}
+.h-sub{font-size:var(--fs450);color:var(--muted);max-width:720px;margin:0 0 42px;font-weight:400}
+
+/* ---- hero ---- */
+.hero{padding:120px 0 96px;border-top:none}
+.hero .kic{font-weight:600;font-size:var(--fs350);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.hero h1{font-weight:900;font-size:clamp(48px,9vw,112px);line-height:.96;letter-spacing:-.045em;margin:0 0 28px}
+.hero p{font-size:var(--fs500);color:var(--muted);max-width:640px;margin:0}
+.hero .meta{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap}
+.hero .meta div{border-left:2px solid var(--accent);padding-left:14px}
+.hero .meta .k{font-size:var(--fs300);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.hero .meta .v{font-size:var(--fs450);font-weight:700;margin-top:3px}
+
+/* ---- S03 matrix ---- */
+.matrix{border-top:2px solid var(--ink)}
+.matrix-head,.matrix-row{display:grid;grid-template-columns:1.3fr 2.7fr;gap:32px}
+.matrix-head{padding:16px 0;border-bottom:1px solid var(--line)}
+.matrix-head span{font-size:var(--fs300);letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700}
+.matrix-row{padding:30px 0;border-bottom:1px solid var(--line);align-items:start}
+#s03 .matrix-row:last-child{border-bottom:0}
+#s04{border-top:0}
+.matrix-row .surface{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:10px}
+.matrix-row .surface .name{font-weight:800;font-size:var(--fs450);line-height:1.25;letter-spacing:-.01em}
+.matrix-row .surface .pos{margin-top:0;display:inline-flex;align-items:center;justify-self:start;gap:8px}
+.matrix-row .surface .illus{grid-column:1/-1;margin-top:18px;width:100%}
+.tag{display:inline-block;font-size:var(--fs300);font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--g100)}
+.tag.arch{color:var(--accent);border-color:#BCE3F7;background:#F0F9FE}
+.tag.comm{color:var(--g600)}
+.tag.diff{color:#0B6B3A;border-color:#B6E2C8;background:#EEF8F1}
+.illus{overflow:hidden;border:1px solid var(--line);border-radius:var(--r8);background:var(--g100)}
+.illus img{width:100%;height:auto;display:block}
+.spec{font-size:var(--fs350)}
+.spec dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.spec dt{font-weight:700;color:var(--ink);white-space:nowrap}
+.spec dd{margin:0;color:var(--ink2)}
+.spec dd b{color:var(--ink);font-weight:600}
+.spec .decision-start{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+
+/* ---- S04 gallery ---- */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:0}
+.tab{appearance:none;border:1px solid var(--line);background:#fff;color:var(--muted);font-family:inherit;font-weight:600;font-size:var(--fs350);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .18s;letter-spacing:-.005em}
+.tab:hover{border-color:var(--accent);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab .n{font-weight:800;margin-left:7px;opacity:.6}
+.subbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px 0;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.card figure{margin:0}
+.card .shot{width:100%;height:auto;display:block;background:transparent;border-radius:var(--r8)}
+.card figcaption{margin-top:14px;font-size:var(--fs350);font-weight:600;text-align:center}
+.card figcaption span{display:block;font-size:var(--fs300);color:var(--faint);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
+.empty{grid-column:1/-1;border:2px dashed var(--g300);border-radius:var(--r12);background:var(--g100);padding:64px;text-align:center;color:var(--faint)}
+.empty b{display:block;color:var(--muted);font-size:var(--fs450);margin-bottom:6px}
+
+/* ---- S05 key takeaways (Figma: phone evidence) ---- */
+.tko{padding:52px 0;border-bottom:1px solid var(--line)}
+.tko:last-child{border-bottom:none}
+.tko .lab{font-size:var(--fs300);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.tko h3{font-weight:800;font-size:var(--fs650);line-height:1.16;letter-spacing:-.02em;margin:0}
+.tko .note{margin:18px 0 0;font-size:var(--fs350);color:var(--muted);max-width:420px}
+.tko .note .mh{font-weight:700;color:var(--ink);display:block;margin-bottom:10px}
+.tko .note ul{margin:0;padding:0;list-style:none}
+.tko .note li{position:relative;padding-left:18px;margin-bottom:8px}
+.tko .note li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.tko .note li b{color:var(--ink);font-weight:700}
+/* phone frame */
+.phone{border-radius:10px;overflow:hidden;background:var(--g100);box-shadow:0 6px 20px rgba(23,43,77,.12);border:1px solid var(--line)}
+.phone img{width:100%;height:auto;display:block;background:var(--g200)}
+.phones{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.phones .phone{flex:1 1 0;min-width:0;max-width:220px}
+.phones-4 .phone{max-width:204px}
+/* tk split (text + evidence) */
+.tk-split{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:start}
+.tk3 .tk-split{align-items:center}
+.tk3 .phones{justify-content:flex-start}
+/* tk1 before/after pairs */
+.tk-pairs{display:flex;flex-direction:column;gap:22px}
+.pair{background:var(--g100);border:1px solid var(--line);border-radius:var(--r12);padding:20px}
+.pair .pm{display:flex;align-items:center;gap:16px;justify-content:center}
+.pair .phone{width:210px;flex:none;box-shadow:0 4px 14px rgba(23,43,77,.10)}
+.pair .pcap{text-align:center;font-size:var(--fs300);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.flip-toolbar{display:flex;justify-content:flex-end;margin-bottom:14px}
+.flip-action{appearance:none;border:1px solid var(--line);border-radius:999px;padding:7px 12px;background:var(--bg);color:var(--accent);font:inherit;font-size:var(--fs300);font-weight:700;cursor:pointer}
+.flip-action:hover{border-color:var(--accent);color:var(--accent)}
+.flip-action:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.flip-scene{perspective:1400px}
+.flip-inner{position:relative;display:grid;transform-style:preserve-3d;transition:transform .55s ease}
+.flip-face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-back{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotateY(180deg)}
+.flip-back video{width:auto;max-width:100%;height:calc(100% - 34px);aspect-ratio:300/650;object-fit:contain;border:1px solid var(--line);border-radius:var(--r8);background:var(--ink)}
+.pair-flip.is-flipped .flip-inner{transform:rotateY(180deg)}
+.collection-flip{min-width:0}
+.collection-flip .phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pair.collection-flip .phone{width:100%;min-width:0;max-width:none;flex:auto}
+.collection-flip .flip-back{padding-top:20px;text-align:center}
+.collection-flip .flip-back video{width:auto;aspect-ratio:auto;background:transparent;border:0;transform:scale(1.2);transform-origin:center bottom}
+.collection-flip .flip-back .pcap{width:100%;text-align:center}
+.conn{display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--faint);flex:none}
+.conn .t{font-size:var(--fs300);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+/* tk2 centered header */
+.tk-center{text-align:center;max-width:640px;margin:0 auto 36px}
+.tk-center .lab{margin-bottom:8px}
+/* S05 comparison table */
+.tk-table-wrap{padding:52px 0 8px;overflow-x:auto}
+.tk-table-wrap .lab{font-size:var(--fs300);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.tk-table-wrap h3{font-weight:800;font-size:var(--fs650);line-height:1.16;letter-spacing:-.02em;margin:0 0 26px}
+table.cmp{width:100%;border-collapse:collapse;font-size:var(--fs350);min-width:760px}
+table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:16px 18px;border-bottom:1px solid var(--line)}
+table.cmp thead th{font-size:var(--fs300);letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:700;border-bottom:2px solid var(--ink)}
+table.cmp thead th:first-child{width:118px}
+table.cmp tbody th{font-weight:800;color:var(--ink);white-space:nowrap}
+table.cmp td{color:var(--muted);width:27%}
+table.cmp td b{color:var(--ink);font-weight:700}
+table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none}
+.zalo-template-section .h-title{margin-bottom:32px}
+
+/* ---- performance overview ---- */
+.perf-board{border-top:2px solid var(--ink)}
+.perf-head{display:grid;grid-template-columns:150px repeat(4,1fr);border-bottom:1px solid var(--line)}
+.perf-head span{padding:14px 18px;font-size:var(--fs300);font-weight:700;color:var(--faint)}
+.perf-head span:first-child{padding-left:20px}
+.perf-row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line)}
+.perf-format{display:flex;align-items:center;padding:24px 20px;background:var(--ink);color:var(--bg);font-size:var(--fs500);font-weight:900;letter-spacing:-.02em}
+.perf-cells{display:grid;grid-template-columns:repeat(4,1fr)}
+.perf-metric{min-width:0;padding:24px 18px;border-left:1px solid var(--line)}
+.perf-metric .metric-name{display:none;font-size:var(--fs300);font-weight:700;color:var(--faint);margin-bottom:8px}
+.perf-metric .value{display:block;font-size:var(--fs650);line-height:1;font-weight:900;letter-spacing:-.035em;color:var(--ink);margin-bottom:14px}
+.perf-metric code{display:block;font-family:var(--font);font-size:var(--fs325);line-height:1.35;font-weight:600;color:var(--ink2);overflow-wrap:anywhere}
+.perf-metric .surface{display:block;margin-top:5px;font-size:var(--fs300);font-weight:500;color:var(--faint)}
+.data-note{position:relative;display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 8px;margin:-22px 0 36px;font-size:var(--fs350);color:var(--muted)}
+.data-note-link{appearance:none;border:0;border-bottom:1px solid currentColor;padding:0;background:transparent;color:var(--accent);font:inherit;font-weight:700;line-height:1.35;cursor:pointer}
+.data-note-link:hover{color:var(--ink)}
+.data-note-link:focus-visible,.data-popover-close:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.data-popover{position:absolute;top:calc(100% + 12px);left:0;z-index:60;width:min(720px,calc(100vw - 44px));max-height:70vh;overflow:auto;padding:28px 30px;background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r12);box-shadow:var(--shadow);color:var(--ink)}
+.data-popover[hidden]{display:none}
+.data-popover-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.data-popover-head h3{margin:0;font-size:var(--fs600);line-height:1.2;letter-spacing:-.02em}
+.data-popover-close{appearance:none;display:grid;place-items:center;flex:none;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--muted);font:inherit;font-size:var(--fs500);line-height:1;cursor:pointer}
+.data-popover-close:hover{border-color:var(--ink);color:var(--ink)}
+.data-popover-list{margin:0;padding:0;list-style:none;counter-reset:data-note}
+.data-popover-list>li{counter-increment:data-note;position:relative;padding:20px 0 20px 38px;border-bottom:1px solid var(--line);font-size:var(--fs350);color:var(--ink2)}
+.data-popover-list>li:last-child{padding-bottom:0;border-bottom:0}
+.data-popover-list>li::before{content:counter(data-note,decimal-leading-zero);position:absolute;top:20px;left:0;color:var(--accent);font-weight:900;font-size:var(--fs325)}
+.data-popover-list h4{margin:0 0 7px;color:var(--ink);font-size:var(--fs400);font-weight:800}
+.data-popover-list p{margin:0 0 8px}
+.data-popover-list p:last-child{margin-bottom:0}
+.data-popover-list code{font-family:var(--font);font-weight:600;color:var(--ink);overflow-wrap:anywhere}
+.data-popover-list ul{margin:8px 0 0;padding-left:18px}
+.data-popover-list ul li{margin-bottom:7px}
+.data-popover-list .caution{color:var(--warn-ink)}
+
+/* ---- Carousel measurement ---- */
+.measure-stack{display:grid;gap:72px}
+.measure-block{position:relative;border-top:2px solid var(--ink);padding-top:22px}
+.measure-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:18px}
+.measure-title{display:flex;align-items:baseline;gap:12px}
+.measure-title .n{font-size:var(--fs325);font-weight:900;color:var(--accent);letter-spacing:.1em}
+.measure-title h3{margin:0;font-size:var(--fs600);line-height:1.2;letter-spacing:-.02em}
+.measure-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.confidence{display:inline-flex;align-items:center;min-height:24px;padding:2px 9px;border:1px solid var(--line);border-radius:999px;background:var(--g100);color:var(--muted);font-size:var(--fs300);font-weight:700}
+.measure-link{appearance:none;border:0;border-bottom:1px solid currentColor;padding:0;background:transparent;color:var(--accent);font:inherit;font-size:var(--fs325);font-weight:700;cursor:pointer}
+.measure-link:hover{color:var(--ink)}
+.measure-link:focus-visible,.measure-popover-close:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.measure-desc{margin:0 0 18px;color:var(--muted);font-size:var(--fs350)}
+.measure-popover{position:absolute;top:0;right:0;z-index:60;width:min(720px,100%);max-height:70vh;overflow:auto;padding:28px 30px;background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r12);box-shadow:var(--shadow);color:var(--ink2);font-size:var(--fs325)}
+.measure-popover[hidden]{display:none}
+.measure-popover-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.measure-popover-head h4{margin:0;color:var(--ink);font-size:var(--fs600);line-height:1.2;letter-spacing:-.02em}
+.measure-popover-close{appearance:none;display:grid;place-items:center;flex:none;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--muted);font:inherit;font-size:var(--fs500);line-height:1;cursor:pointer}
+.measure-popover-close:hover{border-color:var(--ink);color:var(--ink)}
+.measure-popover p{margin:0 0 9px}
+.measure-popover p:last-child{margin-bottom:0}
+.measure-popover ul{margin:8px 0 0;padding-left:18px}
+.measure-popover li{margin:5px 0}
+.measure-table-wrap{overflow-x:auto}
+.measure-table{width:100%;min-width:760px;border-collapse:collapse;font-size:var(--fs325);font-variant-numeric:tabular-nums}
+.measure-table th,.measure-table td{padding:13px 15px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.measure-table thead th{color:var(--faint);font-size:var(--fs300);font-weight:700;border-bottom:2px solid var(--ink)}
+.measure-table th:first-child,.measure-table td:first-child{text-align:left}
+.measure-table tbody th{font-weight:700;color:var(--ink)}
+.measure-table .focus-row th{color:var(--accent)}
+.measure-table .metric-gap{background:var(--warn-bg);color:var(--warn-ink);font-weight:800}
+.measure-table .metric-strength{color:var(--accent);font-weight:900;box-shadow:inset 0 -2px var(--accent)}
+.paired-layout{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:24px;align-items:stretch}
+.ratio-badge{display:flex;flex-direction:column;justify-content:center;gap:16px;padding:20px;border:1px solid var(--line);border-radius:var(--r12);background:var(--g100);color:var(--ink)}
+.ratio-metric{display:flex;flex-direction:column;align-items:flex-start}
+.ratio-metric+.ratio-metric{padding-top:14px;border-top:1px solid var(--line)}
+.ratio-metric .metric-label{margin:0 0 6px;color:var(--faint);font-size:var(--fs300);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.ratio-metric strong{line-height:1;font-weight:900;letter-spacing:-.04em}
+.ratio-metric .metric-note{margin-top:7px;font-size:var(--fs300);font-weight:700}
+.ratio-primary strong{font-size:var(--fs900);color:var(--accent)}
+.ratio-secondary{color:var(--warn-ink)}
+.ratio-secondary strong{font-size:var(--fs600)}
+.card-measure-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:24px;align-items:stretch}
+.measure-insights{display:grid;grid-template-columns:1fr;gap:10px}
+.measure-insight{display:flex;flex-direction:column;justify-content:center;padding:16px 18px;border-left:3px solid var(--accent);background:var(--g100)}
+.measure-insight-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.measure-insight .value{font-size:var(--fs650);line-height:1.08;font-weight:900;letter-spacing:-.035em;color:var(--accent);font-variant-numeric:tabular-nums}
+.measure-insight.compact .value{font-size:var(--fs500);letter-spacing:-.02em}
+.measure-insight .label{margin-top:7px;font-size:var(--fs300);color:var(--muted);font-weight:600}
+.measure-insight .measure-link{flex:none;font-size:var(--fs300)}
+.measure-secondary-stats{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:16px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-size:var(--fs300)}
+.measure-secondary-stats b{color:var(--ink);font-size:var(--fs350)}
+.measure-warning{display:flex;align-items:center;gap:8px;margin-top:16px;color:var(--warn-ink);font-size:var(--fs325);font-weight:700}
+.measure-warning .measure-link{color:inherit;font-size:inherit}
+
+/* ---- scope (frame 02) ---- */
+.scope2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.scope2 .k{font-size:var(--fs300);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+.scope2 ul{margin:0;padding:0;list-style:none}
+.scope2 li{position:relative;padding-left:20px;margin-bottom:12px;font-size:var(--fs400);color:var(--ink2)}
+.scope2 li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.scope2 li b{color:var(--ink);font-weight:700}
+
+/* ---- recommendation (frame 10) ---- */
+.rec-callouts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:54px}
+.rec-callout{border-left:4px solid var(--accent);padding:24px 28px;background:var(--g100)}
+.rec-callout .callout-label{font-size:var(--fs300);font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:9px}
+.rec-callout h3{margin:0 0 10px;font-size:var(--fs600);line-height:1.2;letter-spacing:-.02em}
+.rec-callout p{margin:0;color:var(--ink2);font-size:var(--fs350)}
+.rec-callout .rec-points{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:16px}
+.rec-callout .rec-points li{position:relative;padding-left:18px;color:var(--ink2);font-size:var(--fs350);line-height:1.5}
+.rec-callout .rec-points li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.rec-tip-wrap{position:relative;display:inline-flex;align-items:center;margin-left:6px;vertical-align:middle}
+.rec-tip-trigger{appearance:none;position:relative;display:inline-grid;place-items:center;width:16px;height:16px;padding:0;border:1px solid var(--ink);border-radius:50%;background:var(--bg);color:var(--ink);font:inherit;font-size:10px;font-weight:900;line-height:1;cursor:help}
+.rec-tip-trigger::after{content:"";position:absolute;inset:-14px}
+.rec-tip-trigger:hover,.rec-tip-trigger[aria-expanded="true"]{background:var(--g200);color:var(--ink)}
+.rec-tip-trigger:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.rec-tip-popover{position:fixed;top:0;left:0;z-index:80;width:min(420px,calc(100vw - 32px));max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;padding:16px 18px;background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r8);box-shadow:var(--shadow);color:var(--ink2);font-size:var(--fs325);line-height:1.5;text-align:left}
+.rec-tip-popover[hidden]{display:none}
+.rec-tip-popover strong{display:block;margin-bottom:8px;color:var(--ink);font-size:var(--fs350)}
+.rec-tip-popover p{margin:0 0 8px}
+.rec-tip-popover p:last-child{margin-bottom:0}
+.rec-tip-popover .rec-tip-calc{padding:9px 10px;border-left:2px solid var(--accent);background:var(--g100);color:var(--ink)}
+.rec-tip-popover .rec-tip-caveat{color:var(--muted)}
+.rec-callout b{color:var(--ink)}
+.rec-demos{display:grid;gap:52px;margin:0 0 54px}
+.rec-demo-head{margin-bottom:22px}
+.rec-demo-head .lab{margin-bottom:8px;color:var(--accent);font-size:var(--fs300);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.rec-demo-head h3{margin:0;font-size:var(--fs600);line-height:1.2;letter-spacing:-.02em}
+.rec-demo-head p{max-width:680px;margin:8px 0 0;color:var(--muted);font-size:var(--fs350)}
+.rec-demo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rec-demo-showcase{display:grid;gap:18px}
+.rec-prototype-frame{min-width:0;margin:0;padding:12px;border:1px solid var(--line);border-radius:var(--r12);background:var(--g100)}
+.rec-prototype-viewport{overflow:hidden;border-radius:var(--r8)}
+.rec-prototype-frame iframe{display:block;width:100%;height:900px;border:0;background:var(--bg)}
+.rec-prototype-frame figcaption{margin-top:10px;color:var(--muted);font-size:var(--fs300);font-weight:700;text-align:center}
+.rec-demo-thumbnails{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rec-demo-figure{min-width:0;margin:0;padding:12px;border:1px solid var(--line);border-radius:var(--r12);background:var(--g100)}
+.rec-zoom-trigger{position:relative;display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.rec-zoom-trigger img{display:block;width:100%;height:auto;border-radius:var(--r8)}
+.rec-zoom-label{position:absolute;top:8px;right:8px;display:grid;width:34px;height:34px;place-items:center;border-radius:var(--pill);background:var(--ink);color:var(--bg)}
+.rec-zoom-label svg{width:17px;height:17px}
+.rec-demo-figure figcaption{margin-top:10px;color:var(--muted);font-size:var(--fs300);font-weight:700;text-align:center}
+.image-zoom-dialog{width:min(920px,calc(100vw - 48px));max-height:calc(100vh - 48px);padding:48px 20px 20px;border:1px solid var(--line);border-radius:var(--r12);background:var(--bg);color:var(--ink)}
+.image-zoom-dialog::backdrop{background:color-mix(in srgb,var(--ink) 76%,transparent)}
+.image-zoom-dialog figure{margin:0}
+.image-zoom-dialog img{display:block;max-width:100%;max-height:calc(100vh - 140px);margin:0 auto;border-radius:var(--r8)}
+.image-zoom-dialog figcaption{margin-top:12px;color:var(--muted);font-size:var(--fs325);font-weight:700;text-align:center}
+.image-zoom-close{position:absolute;top:10px;right:10px;width:36px;height:36px;border:1px solid var(--line);border-radius:var(--pill);background:var(--bg);color:var(--ink);font-size:var(--fs600);line-height:1;cursor:pointer}
+.rec-video-frame{max-width:760px;margin:0 auto;padding:16px;border:1px solid var(--line);border-radius:var(--r12);background:var(--g100)}
+.rec-video-frame video{display:block;width:100%;max-height:620px;object-fit:contain;border-radius:var(--r8);background:transparent}
+
+/* ---- footer ---- */
+.foot{padding:48px 0;color:var(--faint);font-size:var(--fs325);border-top:1px solid var(--line)}
+.foot b{color:var(--muted)}
+
+/* ---- closing section: editorial ---- */
+.thank-you{display:block;min-height:0;padding:72px 0 64px;border-top:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.thank-you .wrap{width:100%}
+.thank-you-inner{max-width:760px;padding:0}
+.thank-you .thank-kic{margin-bottom:18px;color:var(--accent);font-size:var(--fs300);font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.thank-you h2{margin:0;font-size:clamp(48px,6vw,80px);font-weight:900;letter-spacing:-.045em;line-height:.98}
+.thank-you p{max-width:560px;margin:20px 0 0;color:var(--muted);font-size:var(--fs450)}
+.thank-you .thank-meta{display:inline-flex;margin-top:36px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:var(--fs325);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---- labels ---- */
+.src{font-size:var(--fs300);font-weight:700;letter-spacing:.03em;color:var(--accent);background:#F0F9FE;border:1px solid #BCE3F7;border-radius:var(--r4);padding:1px 6px;margin-left:6px}
+.src.hyp{color:#8A6D00;background:#FFF8E6;border-color:#E8C65A}
+
+@media(max-width:1100px){
+  .page-shell{display:block;max-width:none;padding:0}
+  .nav{display:none}
+}
+@media(max-width:900px){
+  .wrap{padding:0 22px}
+  section{padding:64px 0}
+  .matrix-head,.matrix-row{grid-template-columns:1fr;gap:16px}
+  .matrix-head{display:none}
+  .matrix-row .illus{max-width:220px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .tk-split{grid-template-columns:1fr;gap:28px}
+  .tko{padding:40px 0}
+  .pair .phone{width:44%}
+  .phones-4 .phone{max-width:46%}
+  .perf-head{display:none}
+  .perf-row{grid-template-columns:1fr}
+  .perf-format{padding:14px 18px}
+  .perf-cells{grid-template-columns:repeat(2,1fr)}
+  .perf-metric{border-left:none;border-right:1px solid var(--line)}
+  .perf-metric:nth-child(even){border-right:none}
+  .perf-metric:nth-child(n+3){border-top:1px solid var(--line)}
+  .perf-metric .metric-name{display:block}
+  .data-note{align-items:flex-start}
+  .data-popover{padding:22px 20px}
+  .measure-popover{padding:22px 20px}
+  .measure-head{flex-direction:column;gap:12px}
+  .measure-actions{justify-content:flex-start}
+  .measure-stack{gap:52px}
+  .paired-layout,.card-measure-layout{grid-template-columns:1fr}
+  .scope2{grid-template-columns:1fr;gap:24px}
+  .rec-callouts{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .rec-tip-popover{width:calc(100vw - 32px)}
+  .rec-demo-grid{grid-template-columns:1fr}
+  .rec-demo-thumbnails{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(220px,75vw);overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+  .rec-demo-thumbnails .rec-demo-figure{scroll-snap-align:start}
+  .rec-prototype-frame iframe{height:840px}
+}
+@media(min-width:621px){
+  .rec-prototype-frame{width:min(100%,840px);margin-inline:auto}
+  .rec-prototype-viewport{height:720px}
+  .rec-prototype-frame iframe{width:125%;height:900px;transform:scale(.8);transform-origin:top left}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flip-inner{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="page-shell">
+<nav class="nav" aria-label="Primary navigation"><div class="wrap">
+  <div class="brand">Ad Template <b>·</b> Research</div>
+  <div class="links">
+    <div class="nav-group">
+      <a class="nav-main" href="#s03">01 · Market</a>
+      <a class="nav-sub" href="#s03">Format Matrix</a>
+      <a class="nav-sub" href="#s04">Platform Examples</a>
+      <a class="nav-sub" href="#s05">Template Takeaways</a>
+    </div>
+    <div class="nav-group">
+      <a class="nav-main" href="#zalo-templates">02 · Zalo Ads</a>
+      <a class="nav-sub" href="#zalo-templates">Current Templates</a>
+      <a class="nav-sub" href="#performance">Template Performance</a>
+      <a class="nav-sub" href="#zalo">Carousel Insight</a>
+    </div>
+    <div class="nav-group">
+      <a class="nav-main" href="#rec">03 · Recommendation</a>
+      <a class="nav-sub" href="#rec-form-question">Lead Form Demo</a>
+      <a class="nav-sub" href="#rec-carousel">Carousel Demo</a>
+      <a class="nav-sub" href="#rec-comparison">Comparison</a>
+    </div>
+  </div>
+</div></nav>
+
+<main class="page-content">
+<!-- HERO / AGENDA (frame 01) -->
+<header class="hero"><div class="wrap">
+  <div class="kic">Research &amp; Synthesis</div>
+  <h1>Ad template.</h1>
+  <p>Thị trường đang có gì · Zalo Ads thiếu gì · nên làm gì — một mạch từ bức tranh thị trường đến đề xuất.</p>
+  <div class="meta">
+    <div><div class="k">Scope</div><div class="v">Summary &amp; Scope</div></div>
+    <div><div class="k">01</div><div class="v">Market Overview</div></div>
+    <div><div class="k">02</div><div class="v">Zalo Ads Overview</div></div>
+    <div><div class="k">03</div><div class="v">Recommendation</div></div>
+  </div>
+</div></header>
+
+<!-- SCOPE (frame 02) -->
+<section id="scope" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="kic">Summary Research</span><span class="rule"></span></div>
+  <h2 class="h-title">Objectives &amp; Scope</h2>
+  <div class="scope2">
+    <div>
+      <div class="k">Objective</div>
+      <ul>
+        <li>Trả lời: <b>thị trường đang có gì</b> (định dạng quảng cáo phổ biến).</li>
+        <li>Xác định <b>gap của Zalo Ads</b> so với thị trường.</li>
+        <li><b>Đề xuất mẫu quảng cáo</b> phù hợp để làm tiếp.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="k">In-scope</div>
+      <ul>
+        <li>Ưu tiên <b>thị trường Việt Nam</b> &amp; các nền tảng đang hiện diện.</li>
+        <li>Ưu tiên thiết bị: <b>Mobile</b>.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- 01.1 MARKET — AD FORMAT MATRIX -->
+<section id="s03" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">01.1</span><span class="kic">Market Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Ad Format Matrix</h2>
+  <p class="h-sub">Phân loại ad template theo bề mặt đầu tiên người xem nhìn thấy (first audience surface). Mỗi loại gồm đặc tả kỹ thuật và ba lớp hỗ trợ quyết định: định vị, tình huống nên cân nhắc, điều kiện hoặc rủi ro. Số nền tảng chỉ thể hiện độ phủ trong phạm vi khảo sát.</p>
+
+  <div class="matrix">
+    <div class="matrix-head"><span>Bề mặt đầu tiên &amp; Minh họa</span><span>Đặc tả</span></div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Single banner</div><div class="pos"><span class="tag comm">Commodity</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/single-banner-specification.png" alt="Specification minh họa Single banner"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd><b>Image</b> tĩnh</dd>
+        <dt>Biến thể</dt><dd>Các ratio thường gặp: 1:1 · 4:5 · 9:16 · 16:9 · 1.91:1; khả dụng tùy platform và placement</dd>
+        <dt>Nền tảng</dt><dd><b>16</b> trong phạm vi khảo sát — độ phủ rộng nhất (Meta, LinkedIn, WeChat, X, Reddit…)</dd>
+        <dt>Interactive</dt><dd>Thường là xem → tap/click CTA hoặc vùng quảng cáo</dd>
+        <dt>Ad destination</dt><dd>Phụ thuộc objective và placement</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Một thông điệp, ưu đãi hoặc sản phẩm chính</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Người xem chỉ cần hiểu một giá trị và thực hiện một hành động rõ ràng</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Không phù hợp để trình bày nhiều lựa chọn, so sánh hoặc quy trình</dd>
+      </dl></div>
+    </div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Album</div><div class="pos"><span class="tag comm">Niche</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/album-specification.png" alt="Specification minh họa Album"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd><b>Image</b> — grid/mosaic nhiều ảnh</dd>
+        <dt>Biến thể</dt><dd>Số ảnh và layout tùy platform; tap ảnh có thể mở viewer hoặc post detail trong configuration phù hợp</dd>
+        <dt>Nền tảng</dt><dd><b>2 nền tảng còn hiệu lực đã xác minh</b> — Meta Facebook, WeChat</dd>
+        <dt>Interactive</dt><dd>Tap ảnh → viewer/post detail hoặc destination, tùy platform và campaign objective</dd>
+        <dt>Ad destination</dt><dd>Thường dùng một đích đến chung cho toàn bộ quảng cáo; tùy mục tiêu chiến dịch, chạm vào ảnh có thể mở trang đích thay vì trình xem ảnh</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Nhiều ảnh trong cùng một bài đăng và bối cảnh</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Ưu tiên xem tập ảnh tại chỗ thay vì đi đến nhiều điểm đến</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Khó đo đóng góp của từng ảnh; điểm đến khi bấm phụ thuộc mục tiêu và vị trí hiển thị</dd>
+      </dl></div>
+    </div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Carousel</div><div class="pos"><span class="tag diff">Differentiator</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/carousel-specification.png" alt="Specification minh họa Carousel"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd><b>Image/Video</b> — chuỗi card có creative riêng</dd>
+        <dt>Biến thể</dt><dd>2+ card · giới hạn số card và ratio tùy platform · manual hoặc catalog-driven</dd>
+        <dt>Nền tảng</dt><dd><b>~15</b> trong phạm vi khảo sát (TikTok, Pinterest, Meta, X, Reddit…)</dd>
+        <dt>Interactive</dt><dd>Vuốt ngang để khám phá → tap card/CTA</dd>
+        <dt>Ad destination</dt><dd>Shared destination hoặc per-card/product destination, tùy platform, objective và campaign setup</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Chuỗi thẻ để khám phá nhiều sản phẩm, đặc điểm hoặc phần nội dung</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Nội dung có nhiều phần; có thể cần điểm đến riêng theo từng thẻ</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Thẻ phía sau có thể ít được xem; khó so sánh nếu cấu trúc không nhất quán</dd>
+      </dl></div>
+    </div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Collection / Shopping</div><div class="pos"><span class="tag diff">Differentiator chủ lực</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/collection-specification.png" alt="Specification minh họa Collection / Shopping"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd><b>Hero</b> image/video + <b>product tiles</b></dd>
+        <dt>Biến thể</dt><dd>1 hero + nhóm sản phẩm; số tile ở first surface và expanded state tùy platform</dd>
+        <dt>Nền tảng</dt><dd><b>7 nền tảng hiện còn ghi nhận dạng hiển thị này</b> — 6 có định dạng phát hành rộng rãi; WeChat ở phạm vi giới hạn. Không còn tính TikTok như một Collection độc lập vì chức năng đã chuyển vào Catalog/Video Shopping Ads</dd>
+        <dt>Interactive</dt><dd>Tap hero hoặc product tile → close-up, canvas, storefront hoặc PDP tùy platform</dd>
+        <dt>Ad destination</dt><dd>Hero/CTA và từng product tile có thể dùng destination khác nhau; routing tùy implementation</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Nội dung nổi bật dẫn vào danh mục hoặc sản phẩm</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Có nhiều sản phẩm và muốn nối nội dung giới thiệu với quá trình lựa chọn</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Phụ thuộc dữ liệu danh mục, giá, tồn kho, theo dõi sản phẩm và vị trí hiển thị</dd>
+      </dl></div>
+    </div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Video</div><div class="pos"><span class="tag comm">Commodity</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/video-specification.png" alt="Specification minh họa Video"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd><b>Video</b></dd>
+        <dt>Biến thể</dt><dd>9:16 · 16:9 · 1:1 và các ratio theo placement; thời lượng từ vài giây đến nhiều phút, tùy format (6/15/30 giây là các mốc phổ biến, không phải giới hạn chung)</dd>
+        <dt>Nền tảng</dt><dd><b>15</b> trong phạm vi khảo sát (TikTok, YouTube, Meta, Instagram, Pinterest…)</dd>
+        <dt>Interactive</dt><dd>Autoplay hoặc tap-to-play → xem, skip, mở sound hoặc tap CTA</dd>
+        <dt>Ad destination</dt><dd>Phủ toàn bộ phễu — nhận biết, xem video, truy cập, thu lead, cài ứng dụng hoặc bán hàng</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Truyền đạt chuyển động, quy trình, cách sử dụng hoặc câu chuyện</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Giá trị khó thể hiện đầy đủ bằng hình ảnh tĩnh</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Chi phí sản xuất cao hơn; người xem có thể rời đi trước thông điệp chính</dd>
+      </dl></div>
+    </div>
+
+    <div class="matrix-row">
+      <div class="surface"><div class="name">Interactive capabilities</div><div class="pos"><span class="tag diff">Differentiator</span></div><div class="illus"><img loading="lazy" src="present-site-assets/s03/interactive-specification.png" alt="Specification minh họa Interactive"></div></div>
+      <div class="spec"><dl>
+        <dt>Asset</dt><dd>Mixed — poll/quiz · form · playable · AR · rich-media</dd>
+        <dt>Biến thể</dt><dd>Interaction có thể nằm ở first surface, enhancement hoặc post-click experience</dd>
+        <dt>Nền tảng</dt><dd>Độ phủ đang được chuẩn hóa lại theo lớp tương tác (interaction layer)</dd>
+        <dt>Interactive</dt><dd>Người dùng phản hồi, nhập dữ liệu hoặc điều khiển trải nghiệm trực tiếp</dd>
+        <dt>Ad destination</dt><dd>Engagement, lead, app install, traffic hoặc sales, tùy subtype và objective</dd>
+        <dt class="decision-start">Định vị</dt><dd class="decision-start">Cho phép lựa chọn, trả lời, thử hoặc cung cấp thông tin</dd>
+        <dt>Nên cân nhắc khi</dt><dd>Phản hồi của người xem tạo giá trị cho trải nghiệm hoặc bước xử lý tiếp theo</dd>
+        <dt>Điều kiện / rủi ro</dt><dd>Cần kiểm soát khả năng sử dụng, khả năng tiếp cận, dữ liệu cá nhân và chất lượng phản hồi</dd>
+      </dl></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 01.2 MARKET — PLATFORM EXAMPLES -->
+<section id="s04" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">01.2</span><span class="kic">Market Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Platform Examples</h2>
+  <p class="h-sub">Lọc theo <b>Ad Surface</b> để xem cùng một loại định dạng sống ở đâu, trên nền tảng và placement nào.</p>
+  <div class="subbar">
+    <div class="tabs" id="tabs" role="tablist"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<!-- 01.3 MARKET — TEMPLATE TAKEAWAYS (Figma 468:8096 / 470:8173 / 539:1120) -->
+<section id="s05" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">01.3</span><span class="kic">Market Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Template Takeaways</h2>
+  <p class="h-sub"><b>Những điểm giá trị và phù hợp cho Zalo Ads</b> — lấy bề mặt đầu tiên người xem nhìn thấy làm xương sống, sau đó mở rộng theo nền tảng và placement.</p>
+
+  <!-- Takeaway 1 · Conversion -->
+  <div class="tko tk1">
+    <div class="tk-split">
+      <div class="tk-txt">
+        <div class="lab">Key takeaway 1 · Conversion</div>
+        <h3>Pattern thiết kế hướng tới giảm ma sát trước chuyển đổi</h3>
+        <div class="note">
+          <span class="mh">The Fogg Behavior Model (B = MAP) in UX</span>
+          <ul>
+            <li><b>Motivation</b> (The Why): điều gì thúc đẩy người dùng?</li>
+            <li><b>Ability</b> / Simplicity (The How): thao tác dễ tới mức nào?</li>
+            <li><b>Prompt</b> / Trigger (The Now): điều gì ra hiệu để hành động?</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tk-pairs">
+        <div class="pair">
+          <div class="pm">
+            <div class="phone"><img data-s05="tk1-story-a" alt="Facebook Story — trạng thái A"></div>
+            <div class="conn"><span class="t">auto</span><svg width="34" height="12" viewBox="0 0 34 12" fill="none" aria-hidden="true"><path d="M0 6h30m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <div class="phone"><img data-s05="tk1-story-b" alt="Facebook Story — trạng thái B"></div>
+          </div>
+          <div class="pcap">Facebook Story</div>
+        </div>
+        <div class="pair pair-flip" data-flip-card>
+          <div class="flip-toolbar"><button class="flip-action" type="button" data-ds-kind="skill-added" aria-pressed="false">↻ Xem video</button></div>
+          <div class="flip-scene">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="pm">
+                  <div class="phone"><img data-s05="tk1-feed-a" alt="Facebook Feed — trạng thái A"></div>
+                  <div class="conn"><span class="t">auto</span><svg width="34" height="12" viewBox="0 0 34 12" fill="none" aria-hidden="true"><path d="M0 6h30m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                  <div class="phone"><img data-s05="tk1-feed-b" alt="Facebook Feed — trạng thái B"></div>
+                </div>
+                <div class="pcap">Facebook Feed</div>
+              </div>
+              <div class="flip-face flip-back" aria-hidden="true">
+                <video src="present-site-assets/s05/form-feed.m4v" controls playsinline preload="auto" aria-label="Video demo Facebook Feed">
+                  Trình duyệt không hỗ trợ video này.
+                </video>
+                <div class="pcap">Facebook Feed · Video</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Takeaway 2 · Carousel -->
+  <div class="tko tk2">
+    <div class="tk-center">
+      <div class="lab">Key takeaway 2 · Carousel</div>
+      <h3>Pattern hỗ trợ khám phá và lựa chọn</h3>
+    </div>
+    <div class="phones phones-4">
+      <div class="phone"><img data-s05="tk2-p1" alt="Carousel — Threads"></div>
+      <div class="phone"><img data-s05="tk2-p2" alt="Carousel — ad platform"></div>
+      <div class="phone"><img data-s05="tk2-p3" alt="Carousel — DHL Express"></div>
+      <div class="phone"><img data-s05="tk2-p4" alt="Carousel — Facebook"></div>
+    </div>
+  </div>
+
+  <!-- Takeaway 3 · Collection -->
+  <div class="tko tk3">
+    <div class="tk-split">
+      <div class="tk-txt">
+        <div class="lab">Key takeaway 3 · Collection</div>
+        <h3>Pattern kết nối nội dung với khám phá sản phẩm / dịch vụ</h3>
+      </div>
+      <div class="pair pair-flip collection-flip" data-flip-card>
+        <div class="flip-toolbar"><button class="flip-action" type="button" data-ds-kind="skill-added" aria-pressed="false">↻ Xem video</button></div>
+        <div class="flip-scene">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <div class="phones">
+                <div class="phone"><img data-s05="tk3-p1" alt="Collection — Dyson"></div>
+                <div class="phone"><img data-s05="tk3-p2" alt="Collection — nội thất"></div>
+                <div class="phone"><img data-s05="tk3-p3" alt="Collection — Facebook"></div>
+              </div>
+              <div class="pcap">Collection</div>
+            </div>
+            <div class="flip-face flip-back" aria-hidden="true">
+              <video src="present-site-assets/s05/collection.mp4" controls playsinline preload="metadata" aria-label="Video demo Collection">
+                Trình duyệt không hỗ trợ video này.
+              </video>
+              <div class="pcap">Collection · Video</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></section>
+
+<!-- 02.1 ZALO ADS — CURRENT TEMPLATES -->
+<section id="zalo-templates" class="zalo-template-section subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">02.1</span><span class="kic">Zalo Ads Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Current Templates</h2>
+  <div class="subbar">
+    <div class="tabs" id="ztabs" role="tablist"></div>
+  </div>
+  <div class="grid" id="zgrid"></div>
+</div></section>
+
+<!-- 02.2 ZALO ADS — AD TEMPLATE PERFORMANCE -->
+<section id="performance" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">02.2</span><span class="kic">Zalo Ads Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Ad Template Performance</h2>
+  <p class="h-sub">Các vị trí quảng cáo SS có chỉ số cao nhất theo từng định dạng trong tập dữ liệu sau lọc. Vị trí dẫn đầu của mỗi chỉ số có thể khác nhau.</p>
+
+  <div class="data-note">
+    <span>Dữ liệu: 01/10/2025–30/09/2026 · Zalo SS (<code>source_id=1</code>) · ad type có ghi nhận conversion · chỉ xét zone có ≥1 triệu impression.</span>
+    <button class="data-note-link" type="button" aria-expanded="false" aria-controls="performance-data-popover">Xem cách lấy dữ liệu</button>
+    <div class="data-popover" id="performance-data-popover" role="dialog" aria-modal="false" aria-labelledby="performance-data-title" hidden>
+      <div class="data-popover-head">
+        <h3 id="performance-data-title">Phạm vi và nguồn dữ liệu</h3>
+        <button class="data-popover-close" type="button" aria-label="Đóng ghi chú dữ liệu">×</button>
+      </div>
+      <ol class="data-popover-list">
+        <li>
+          <h4>Window</h4>
+          <p><code>date &gt;= 2025-10-01 AND date &lt; 2026-10-01</code></p>
+          <p>Từ <b>01/10/2025 đến hết 30/09/2026</b> — đủ 12 tháng; chặn phải loại trừ ngày 01/10/2026.</p>
+        </li>
+        <li>
+          <h4>Source ad</h4>
+          <p><b>Scope source:</b> chỉ lấy Zalo SS bằng cách join <code>tb_item_full_info</code> và lọc <code>source_id=1</code>.</p>
+          <p>Bảng này đại diện cho traffic SS trong phạm vi filter; không dùng để kết luận cho ZSL, Network/GG, Internal hoặc ZSL Salesforce.</p>
+          <p><b>Lưu ý dữ liệu:</b> traffic SS giai đoạn 08–22/06/2026 bị undercount khoảng 50% do API outage chưa backfill. Không dùng đoạn này để so sánh MoM.</p>
+        </li>
+        <li>
+          <h4>Ad type</h4>
+          <p>Chỉ lấy item có <code>ad_type_id IN (18, 31, 19, 30, 28)</code>: Form, Personal_Form, Message, Personal_Message và Commerce — nhóm có ghi nhận conversion trong hệ thống.</p>
+          <p>Ý nghĩa chính xác của event <code>conversion</code> theo từng ad type vẫn cần Data team xác nhận; số liệu hiện dùng để mô tả tương quan, không chứng minh nhân quả.</p>
+          <p><code>Conv/click</code> không nên so trực tiếp giữa các zone khi cơ cấu ad type khác nhau; đặc biệt Personal_Message (30) có thể ghi nhận conversion không gate theo click.</p>
+          <p>Cả tử số lẫn mẫu số của impression, click và conversion đều giới hạn trong nhóm này.</p>
+        </li>
+        <li>
+          <h4>Table nguồn</h4>
+          <ul>
+            <li><code>dm_da.tb_ads_traffic</code> (ClickHouse): impression, click và conversion theo creative × zone × <code>multi_image_type</code> — 0 Single, 1 Album, 2 Carousel, 3 Video.</li>
+            <li>Join <code>dm_zads_growth.tb_item_full_info</code> để lấy <code>ad_type_id</code>, <code>source_id</code> và lọc <code>source_id=1</code>.</li>
+            <li>Join <code>dm_da.tb_dim_zone_info</code> để lấy tên <code>zone</code> và <code>website</code>.</li>
+            <li>Output: <code>data/ad-template-performance-break-by-zone-SS1__2026-Q3.csv</code>.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="perf-board" role="table" aria-label="Ad Template Performance">
+    <div class="perf-head" role="row">
+      <span role="columnheader">Format</span>
+      <span role="columnheader">Impr cao nhất</span>
+      <span role="columnheader">CTR cao nhất</span>
+      <span role="columnheader">Conv/1k impr cao nhất</span>
+      <span role="columnheader">Conv/click cao nhất</span>
+    </div>
+
+    <div class="perf-row" role="row">
+      <div class="perf-format" role="rowheader">Single</div>
+      <div class="perf-cells">
+        <div class="perf-metric" role="cell"><span class="metric-name">Impr cao nhất</span><span class="value">9.55 tỷ</span><code>zaloapp.native.inbox</code><span class="surface">Zalo App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">CTR cao nhất</span><span class="value">0.871%</span><code>baomoiapp…sub.native.related1</code><span class="surface">BaoMoi App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/1k impr cao nhất</span><span class="value">0.299/1k</span><code>zaloapp.native.feedstory</code><span class="surface">Zalo App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/click cao nhất</span><span class="value">8.42%</span><code>zaloapp.native.feedstory</code><span class="surface">Zalo App</span></div>
+      </div>
+    </div>
+
+    <div class="perf-row" role="row">
+      <div class="perf-format" role="rowheader">Album</div>
+      <div class="perf-cells">
+        <div class="perf-metric" role="cell"><span class="metric-name">Impr cao nhất</span><span class="value">3.13 tỷ</span><code>zaloapp.native.feed1</code><span class="surface">Zalo App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">CTR cao nhất</span><span class="value">0.794%</span><code>baomoiapp…home.native.listing2</code><span class="surface">BaoMoi App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/1k impr cao nhất</span><span class="value">0.059/1k</span><code>zaloapp.native.feed3</code><span class="surface">Zalo App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/click cao nhất</span><span class="value">2.30%</span><code>baomoiapp.ios.sub.special1</code><span class="surface">BaoMoi App</span></div>
+      </div>
+    </div>
+
+    <div class="perf-row" role="row">
+      <div class="perf-format" role="rowheader">Carousel</div>
+      <div class="perf-cells">
+        <div class="perf-metric" role="cell"><span class="metric-name">Impr cao nhất</span><span class="value">91.5 tr</span><code>videofeed.native.feed1</code><span class="surface">Video Feed</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">CTR cao nhất</span><span class="value">0.236%</span><code>baomoiapp.android.sub.special1</code><span class="surface">BaoMoi App</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/1k impr cao nhất</span><span class="value">0.103/1k</span><code>videofeed.native.feed3</code><span class="surface">Video Feed</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/click cao nhất</span><span class="value">4.78%</span><code>videofeed.native.feed3</code><span class="surface">Video Feed</span></div>
+      </div>
+    </div>
+
+    <div class="perf-row" role="row">
+      <div class="perf-format" role="rowheader">Video</div>
+      <div class="perf-cells">
+        <div class="perf-metric" role="cell"><span class="metric-name">Impr cao nhất</span><span class="value">43.0 tr</span><code>zalovideo.ios.video1</code><span class="surface">ZaloVideo_New</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">CTR cao nhất</span><span class="value">0.438%</span><code>zalovideo.ios.video1</code><span class="surface">ZaloVideo_New</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/1k impr cao nhất</span><span class="value">0.342/1k</span><code>zalovideo.android.video1</code><span class="surface">ZaloVideo_New</span></div>
+        <div class="perf-metric" role="cell"><span class="metric-name">Conv/click cao nhất</span><span class="value">9.84%</span><code>zalovideo.android.video1</code><span class="surface">ZaloVideo_New</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 02.3 ZALO ADS — CAROUSEL MEASUREMENT INSIGHT -->
+<section id="zalo" class="subsection"><div class="wrap">
+  <div class="eyebrow"><span class="no">02.3</span><span class="kic">Zalo Ads Overview</span><span class="rule"></span></div>
+  <h2 class="h-title">Carousel Measurement Insight</h2>
+  <p class="h-sub">Ba lớp dữ liệu cùng cửa sổ YTD 01/01–09/10/2026, nhưng dùng cohort và filter khác nhau theo từng câu hỏi.</p>
+
+  <div class="measure-stack">
+    <article class="measure-block">
+      <div class="measure-head">
+        <div class="measure-title"><span class="n">01</span><h3>So sánh 4 định dạng</h3></div>
+        <div class="measure-actions">
+          <span class="confidence">High</span>
+          <button class="measure-link" type="button" data-ds-kind="skill-added" aria-expanded="false" aria-controls="measure-popover-1">xem thêm ›</button>
+        </div>
+      </div>
+      <p class="measure-desc">So sánh 4 định dạng trong nhóm ad type có ghi nhận conversion, YTD. <b>Lưu ý:</b> CTR của Carousel không so sánh trực tiếp với format khác — mẫu số chỉ ghi impression ở card đầu, không ghi nhận swipe (xem khối 03). Nên đọc Carousel qua <b>Conv/click</b> và funnel riêng.</p>
+      <div class="measure-popover" id="measure-popover-1" role="dialog" aria-modal="false" aria-labelledby="measure-popover-title-1" hidden>
+        <div class="measure-popover-head"><h4 id="measure-popover-title-1">Định nghĩa chỉ số &amp; độ tin</h4><button class="measure-popover-close" type="button" data-ds-kind="skill-added" aria-label="Đóng">×</button></div>
+        <p><b>CTR</b> = clicks / impressions.</p>
+        <p><b>Conv/1k impr</b> = conversions / impressions × 1,000.</p>
+        <p><b>Conv/click</b> = conversions / clicks × 100.</p>
+        <p><b>High</b> — khớp tool hệ thống 1:1; reconcile card 731 ↔ 3892 = 100%.</p>
+      </div>
+      <div class="measure-table-wrap">
+        <table class="measure-table">
+          <thead><tr><th>Format</th><th>Ads</th><th>Impr</th><th>CTR</th><th>Conv/1k impr</th><th>Conv/click</th></tr></thead>
+          <tbody>
+            <tr><th>Single</th><td>205,894</td><td>16.26B</td><td>0.417%</td><td>0.037</td><td>0.89%</td></tr>
+            <tr><th>Album</th><td>115,759</td><td>4.16B</td><td>0.580%</td><td>0.041</td><td>0.70%</td></tr>
+            <tr class="focus-row"><th>Carousel</th><td>20,606</td><td>119.6M</td><td class="metric-gap">0.091%</td><td>0.021</td><td class="metric-strength">2.30%</td></tr>
+            <tr><th>Video</th><td>6,512</td><td>193.9M</td><td>0.335%</td><td>0.194</td><td>5.78%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="measure-block">
+      <div class="measure-head">
+        <div class="measure-title"><span class="n">02</span><h3>Carousel và Album cùng SKU</h3></div>
+        <div class="measure-actions">
+          <span class="confidence">Medium–High</span>
+          <button class="measure-link" type="button" data-ds-kind="skill-added" aria-expanded="false" aria-controls="measure-popover-2">xem thêm ›</button>
+        </div>
+      </div>
+      <p class="measure-desc">Pooled aggregate của 1,646 ad chạy đồng thời cả 2 format, cùng SKU, YTD.</p>
+      <div class="measure-popover" id="measure-popover-2" role="dialog" aria-modal="false" aria-labelledby="measure-popover-title-2" hidden>
+        <div class="measure-popover-head"><h4 id="measure-popover-title-2">Điều kiện, độ tin &amp; breakdown</h4><button class="measure-popover-close" type="button" data-ds-kind="skill-added" aria-label="Đóng">×</button></div>
+        <p><b>Điều kiện:</b> car_impr ≥ 10,000 AND alb_impr ≥ 10,000.</p>
+        <p><b>Medium–High</b> — matching cùng ad giúp giảm confound advertiser và thời gian, nhưng chưa loại bỏ creative, placement, bidding hoặc self-selection.</p>
+        <p><b>Giới hạn hiện tại:</b> đây là pooled aggregate; chưa có tỷ lệ ad thắng Album, phân phối chênh lệch theo ad hoặc khoảng tin cậy (confidence interval). Vì vậy kết quả phù hợp để hình thành giả thuyết, chưa đủ để kết luận format tạo ra uplift.</p>
+        <p><b>Dữ liệu cần bóc tách:</b> grain <code>ad_id × ad_format</code> cho 1,646 ad matched, gồm <code>impression</code>, <code>click</code>, <code>conversion</code>, <code>ad_type_id</code>, <code>bid_type</code>, zone/placement và date. Từ đó tính chênh lệch theo từng ad, win rate, median và bootstrap 95% CI; đồng thời stratify theo ad type, bidding và placement.</p>
+        <ul>
+          <li>FORM: C 0.79% / A 0.64% / S 0.41%</li>
+          <li>Personal_Form: C 1.63% / S 1.24% / A 0.91%</li>
+          <li>CommerceAd: C 0.34% / S 0.19% / A 0.17%</li>
+          <li>PERSONAL_MESSAGE: C 3.47% / S 3.28% / A 2.26%</li>
+          <li>MESSAGE: A 5.11% / C 4.14% / S 2.36%</li>
+        </ul>
+      </div>
+      <div class="paired-layout">
+        <div class="measure-table-wrap">
+          <table class="measure-table">
+            <thead><tr><th>Chỉ số</th><th>Carousel</th><th>Album</th></tr></thead>
+            <tbody>
+              <tr><th>CTR</th><td class="metric-gap">0.084%</td><td>0.509%</td></tr>
+              <tr><th>Conv/1k impr</th><td>0.020</td><td>0.091</td></tr>
+              <tr><th>Conv/click</th><td class="metric-strength">2.40%</td><td>1.79%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ratio-badge" aria-label="So sánh CR và CTR giữa Carousel với Album">
+          <div class="ratio-metric ratio-primary">
+            <span class="metric-label">CR · Conv/click</span>
+            <strong>~1.34×</strong>
+            <span class="metric-note">Carousel cao hơn Album</span>
+          </div>
+          <div class="ratio-metric ratio-secondary">
+            <span class="metric-label">CTR</span>
+            <strong>~6.1×</strong>
+            <span class="metric-note">Carousel thấp hơn Album</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="measure-block">
+      <div class="measure-head">
+        <div class="measure-title"><span class="n">03</span><h3>Image_view &amp; Click Distribution by Card</h3></div>
+      </div>
+      <div class="measure-desc">Card đầu và card sau trên Carousel, website YTD.<span class="rec-tip-wrap"><button class="rec-tip-trigger" type="button" aria-expanded="false" aria-controls="measure-tip-image-view" aria-label="Lưu ý phạm vi và cách đọc image_view">i</button><span class="rec-tip-popover" id="measure-tip-image-view" role="tooltip" hidden><strong>Phạm vi và cách đọc image_view</strong><p><b>Chỉ dùng image_view cho <code>ad_format = 2</code> (Carousel).</b> Image_view của Single là dữ liệu ETL không hợp lệ; Album bằng 0 theo specification.</p><p><b>Cách đọc bảng:</b> <code>sub_index = 0</code> là card đầu; <code>sub_index &gt; 0</code> là các card phía sau. Impression chỉ ghi ở card đầu, vì vậy impression = 0 ở card sau không có nghĩa card đó không được phân phối.</p><p class="rec-tip-calc">87.5M image_view = 37.35M lượt xem card đầu + 50.14M lượt xem card sau. Explore rate 0.265 = 87.5M image_view / 329.6M impression.</p><p><b>Định nghĩa:</b> một card được tính image_view khi hiển thị ít nhất 75% chiều cao quảng cáo, trọn bề ngang và liên tục trong 1 giây. Nguồn APSP pageId 115980648.</p><p><b>Nguồn dữ liệu:</b> Metabase db35 — card 3891 (traffic) / 3892 (revenue) / 731 (ad perf).</p><p><b>Cửa sổ dữ liệu:</b> YTD 01/01 → 09/10/2026.</p><p><b>Bộ lọc:</b> <code>ad_format = 2</code>, <code>ad_type ∈ (18,31,19,30,28)</code> conversion-valid.</p><p><b>Revenue:</b> chi tiêu advertiser (doanh thu Zalo Ads), không phải doanh số brand.</p><p class="rec-tip-caveat">Image_view là lượt xem card, không phải người dùng duy nhất. Cơ chế sinh event chưa được team Data xác nhận đầy đủ, nên các diễn giải hành vi giữ mức tin cậy Medium.</p></span></span></div>
+      <div class="card-measure-layout">
+        <div class="measure-table-wrap">
+          <table class="measure-table">
+            <thead><tr><th>Vị trí card</th><th>Impressions</th><th>Image_views</th><th>Clicks</th></tr></thead>
+            <tbody>
+              <tr><th>sub_index = 0</th><td>329,626,078</td><td>37,354,495</td><td>78,563</td></tr>
+              <tr><th>sub_index &gt; 0</th><td>0</td><td>50,138,083</td><td class="metric-strength">470,999</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="measure-insights">
+          <div class="measure-insight">
+            <div class="measure-insight-head">
+              <span class="value">85.7%</span>
+              <button class="measure-link" type="button" data-ds-kind="skill-added" aria-expanded="false" aria-controls="measure-popover-3-1">xem thêm ›</button>
+            </div>
+            <span class="label">Click ở card sau · impression = 0</span>
+          </div>
+          <div class="measure-insight compact">
+            <div class="measure-insight-head">
+              <span class="value">0.21% → 0.94% · ×4.5</span>
+              <button class="measure-link" type="button" data-ds-kind="skill-added" aria-expanded="false" aria-controls="measure-popover-3-2">xem thêm ›</button>
+            </div>
+            <span class="label">Click/Image_view · card đầu → card sau</span>
+          </div>
+          <div class="measure-insight compact">
+            <div class="measure-insight-head">
+              <span class="value">100% → 26.5% → 0.63%</span>
+              <button class="measure-link" type="button" data-ds-kind="skill-added" aria-expanded="false" aria-controls="measure-popover-3-3">xem thêm ›</button>
+            </div>
+            <span class="label">Impr → Image_view → Click</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="measure-popover" id="measure-popover-3-1" role="dialog" aria-modal="false" aria-labelledby="measure-popover-title-3-1" hidden>
+        <div class="measure-popover-head"><h4 id="measure-popover-title-3-1">Impression và phân bố click</h4><button class="measure-popover-close" type="button" data-ds-kind="skill-added" aria-label="Đóng">×</button></div>
+        <p>Impression đóng dấu 100% ở card đầu, nhưng <b>85.7% click</b> (470,999/549,562) phát sinh ở card sau — nơi impression = 0.</p>
+        <p>CTR lấy tử số chủ yếu từ card sau chia cho mẫu số chỉ ghi nhận ở card đầu và không ghi nhận swipe. <span class="confidence">High</span></p>
+      </div>
+      <div class="measure-popover" id="measure-popover-3-2" role="dialog" aria-modal="false" aria-labelledby="measure-popover-title-3-2" hidden>
+        <div class="measure-popover-head"><h4 id="measure-popover-title-3-2">Click trên mỗi thẻ được xem</h4><button class="measure-popover-close" type="button" data-ds-kind="skill-added" aria-label="Đóng">×</button></div>
+        <p>Card đầu: 78,563/37.35M = <b>0.21%</b>. Card sau: 470,999/50.14M = <b>0.94%</b>, tương đương khoảng <b>4.5×</b>.</p>
+        <p>Card người dùng chủ động swipe tới có tỷ lệ click/Image_view cao hơn. <span class="confidence">Medium</span></p>
+      </div>
+      <div class="measure-popover" id="measure-popover-3-3" role="dialog" aria-modal="false" aria-labelledby="measure-popover-title-3-3" hidden>
+        <div class="measure-popover-head"><h4 id="measure-popover-title-3-3">Funnel Impression → Image_view → Click</h4><button class="measure-popover-close" type="button" data-ds-kind="skill-added" aria-label="Đóng">×</button></div>
+        <p>329.6M impression → 87.5M image_view (<b>26.5%</b>) → 549,562 click (<b>0.63%</b> trên image_view).</p>
+        <p>Phần giảm lớn nằm ở bước image_view → click; metric này có thể chịu ảnh hưởng bởi template, CTA và deeplink theo card. <span class="confidence">Medium</span></p>
+      </div>
+
+      <div class="measure-secondary-stats">
+        <span><b>87.5M</b> Image_views tổng</span>
+        <span><b>0.265</b> Explore rate · thẻ/impr</span>
+        <span>Album = <b>0</b> Image_view theo specification</span>
+      </div>
+    </article>
+
+  </div>
+</div></section>
+
+<!-- 03 RECOMMENDATION -->
+<section id="rec"><div class="wrap">
+  <div class="eyebrow"><span class="no">03</span><span class="kic">Recommendation</span><span class="rule"></span></div>
+  <h2 class="h-title">Recommendation</h2>
+  <p class="h-sub">Recommendation tổng hợp từ khoảng trống thị trường và tín hiệu ad performance.</p>
+
+  <div class="rec-callouts">
+    <aside class="rec-callout">
+      <div class="callout-label">Khoảng trống định dạng</div>
+      <h3>Mở rộng các định dạng được thị trường hỗ trợ rộng rãi</h3>
+      <ul class="rec-points">
+        <li><b>Khoảng trống:</b> Zalo Ads chưa có <b>Carousel with Per-Card Destinations</b> và <b>Collection Ad</b> — hai pattern được nhiều nền tảng trong phạm vi khảo sát hỗ trợ.</li>
+        <li><b>Tín hiệu nội bộ:</b> mẫu matched-ad ghi nhận <b>Conv/click pooled aggregate của Carousel cao gấp khoảng 1.34 lần Album trên cùng SKU</b>. Đây là tín hiệu để kiểm chứng, chưa chứng minh uplift đến từ bản thân định dạng.<span class="rec-tip-wrap"><button class="rec-tip-trigger" type="button" aria-expanded="false" aria-controls="rec-tip-pooled" aria-label="Giải thích pooled aggregate">i</button><span class="rec-tip-popover" id="rec-tip-pooled" role="tooltip" hidden><strong>“Pooled aggregate” được tính như thế nào?</strong><p>Cộng toàn bộ click và conversion của 1,646 quảng cáo matched, sau đó lấy tổng conversion chia cho tổng click của từng định dạng.</p><p class="rec-tip-calc">Carousel: 2.40% · Album: 1.79% · 2.40 ÷ 1.79 ≈ 1.34 lần.</p><p class="rec-tip-caveat">Không có nghĩa mỗi quảng cáo Carousel đều tốt hơn 34%. Quảng cáo có nhiều click sẽ có trọng số lớn hơn; hiện chưa có tỷ lệ quảng cáo thực sự thắng Album.</p></span></span></li>
+        <li><b>Điểm hòa vốn ước tính:</b> để ngang Album ở mức <b>0.091 conversion/1,000 impressions</b> trong khi giữ <b>Conv/click 2.40%</b>, Carousel cần CTR khoảng <b>0.38%</b> — xấp xỉ <b>4.5 lần</b> mức 0.084% hiện tại. Dùng ngưỡng này cho controlled experiment trước khi ưu tiên full build.<span class="rec-tip-wrap"><button class="rec-tip-trigger" type="button" aria-expanded="false" aria-controls="rec-tip-breakeven" aria-label="Giải thích điểm hòa vốn ước tính">i</button><span class="rec-tip-popover" id="rec-tip-breakeven" role="tooltip" hidden><strong>Vì sao cần CTR khoảng 0.38%?</strong><p>Album hiện tạo 0.091 conversion trên 1,000 impressions. Nếu Carousel giữ tỷ lệ 2.40% conversion/click, nó cần khoảng 3.79 click trên 1,000 impressions để tạo cùng số conversion.</p><p class="rec-tip-calc">3.79 click/1,000 impressions = CTR khoảng 0.38% · cao gấp khoảng 4.5 lần CTR 0.084% hiện tại.</p><p class="rec-tip-caveat">Đây là điểm hòa vốn giả định, không phải dự báo. Khi CTR tăng, chất lượng nhóm click mới có thể giảm; khi đó CTR cần thiết sẽ cao hơn 0.38%.</p></span></span></li>
+        <li><b>Hướng Collection:</b> đây là <b>giả thuyết tăng trưởng advertiser</b> dựa trên benchmark thị trường, chưa có dữ liệu nội bộ. Cần kiểm chứng nhu cầu của advertiser commerce/retail trước khi build.</li>
+      </ul>
+    </aside>
+    <aside class="rec-callout">
+      <div class="callout-label">Lead Form</div>
+      <h3>Đưa câu hỏi lên ngay ad surface</h3>
+      <p>Cải thiện ad type chủ lực <b>Lead Form</b> bằng template hiển thị sẵn câu hỏi dạng overlay. Mục tiêu là giảm ma sát khi bắt đầu, tăng tỷ lệ để lại lead hoặc <b>arrival rate</b> vào Form.</p>
+    </aside>
+  </div>
+
+  <div class="rec-demos">
+    <article class="rec-demo" id="rec-form-question">
+      <div class="rec-demo-head">
+        <div class="lab">Demo 01 · Lead Form</div>
+        <h3>Form Question Overlay / Inline Preview</h3>
+        <p>Minh họa câu hỏi lựa chọn xuất hiện trực tiếp trên Single banner và Album ad surface trước khi mở toàn bộ Form.</p>
+      </div>
+      <div class="rec-demo-showcase">
+        <figure class="rec-prototype-frame">
+          <div class="rec-prototype-viewport">
+            <iframe
+              src="../carousel-album-adformat-research__2026-Q4/social-template-mobile/index.html"
+              title="Prototype tương tác Form Question Overlay"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <figcaption>Interactive prototype</figcaption>
+        </figure>
+        <div class="rec-demo-thumbnails" aria-label="Ảnh minh họa Form Question Overlay">
+          <figure class="rec-demo-figure">
+            <button class="rec-zoom-trigger" type="button" data-zoom-src="present-site-assets/recommendation/form-question-single.png" data-zoom-alt="Form Question Overlay trên Single banner" aria-label="Phóng to ảnh Single banner">
+              <img loading="lazy" src="present-site-assets/recommendation/form-question-single.png" alt="Form Question Overlay trên Single banner">
+              <span class="rec-zoom-label" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="M11 8v6M8 11h6m8 9-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </button>
+            <figcaption>Single banner</figcaption>
+          </figure>
+          <figure class="rec-demo-figure">
+            <button class="rec-zoom-trigger" type="button" data-zoom-src="present-site-assets/recommendation/form-question-album-master.png" data-zoom-alt="Form Question Overlay trên Album master" aria-label="Phóng to ảnh Album master">
+              <img loading="lazy" src="present-site-assets/recommendation/form-question-album-master.png" alt="Form Question Overlay trên Album master">
+              <span class="rec-zoom-label" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="M11 8v6M8 11h6m8 9-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </button>
+            <figcaption>Album · Master</figcaption>
+          </figure>
+          <figure class="rec-demo-figure">
+            <button class="rec-zoom-trigger" type="button" data-zoom-src="present-site-assets/recommendation/form-question-album-variant.png" data-zoom-alt="Form Question Overlay trên Album variant" aria-label="Phóng to ảnh Album variant">
+              <img loading="lazy" src="present-site-assets/recommendation/form-question-album-variant.png" alt="Form Question Overlay trên Album variant">
+              <span class="rec-zoom-label" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="M11 8v6M8 11h6m8 9-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            </button>
+            <figcaption>Album · Variant</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="rec-demo" id="rec-carousel">
+      <div class="rec-demo-head">
+        <div class="lab">Demo 02 · Carousel</div>
+        <h3>Carousel with Per-Card Destinations</h3>
+        <p>Minh họa mỗi card có thể dẫn tới destination riêng, phù hợp với từng sản phẩm hoặc nội dung.</p>
+      </div>
+      <div class="rec-video-frame">
+        <video controls playsinline preload="metadata" aria-label="Video demo Carousel with Per-Card Destinations">
+          <source src="present-site-assets/recommendation/carousel-per-destination.mp4" type="video/mp4">
+          Trình duyệt không hỗ trợ video này.
+        </video>
+      </div>
+    </article>
+  </div>
+
+  <dialog class="image-zoom-dialog" id="rec-image-zoom" aria-labelledby="rec-image-zoom-caption">
+    <button class="image-zoom-close" type="button" aria-label="Đóng ảnh phóng to">×</button>
+    <figure>
+      <img id="rec-image-zoom-img" src="" alt="">
+      <figcaption id="rec-image-zoom-caption"></figcaption>
+    </figure>
+  </dialog>
+
+  <div class="tk-table-wrap" id="rec-comparison">
+    <div class="lab">Ba hướng template</div>
+    <h3>So sánh thông tin chi tiết</h3>
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th>Nội dung</th>
+          <th>Form Question Overlay / Inline Preview</th>
+          <th>Carousel</th>
+          <th>Collection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Định vị</th>
+          <td><b>Bắt đầu trả lời ngay trên ad</b>, trước khi mở toàn bộ Form; giảm thao tác bắt đầu cung cấp thông tin.</td>
+          <td><b>Khám phá nhiều lựa chọn</b> qua sản phẩm, tính năng hoặc các phần của câu chuyện.</td>
+          <td><b>Từ cảm hứng đến chọn sản phẩm</b>, thông qua hero và danh mục.</td>
+        </tr>
+        <tr>
+          <th>Hành vi người xem</th>
+          <td>Theo concept: ad tự chuyển sang card câu hỏi khi người xem dừng lại. Người xem trả lời tại ad; hệ thống mở Form ở câu hỏi tiếp theo.</td>
+          <td>Chủ động vuốt và khám phá từng card.</td>
+          <td>Mở trải nghiệm danh mục, duyệt rồi chọn sản phẩm.</td>
+        </tr>
+        <tr>
+          <th>Cấu trúc</th>
+          <td>Card 1: ảnh đơn. Card 2: lớp phủ chứa câu hỏi và các lựa chọn trả lời.</td>
+          <td>Chuỗi card có thể vuốt.</td>
+          <td>Hero + lưới sản phẩm.</td>
+        </tr>
+        <tr>
+          <th>Điểm đến</th>
+          <td>Form, tiếp nối câu trả lời đã chọn trên ad.</td>
+          <td>Riêng theo card/sản phẩm hoặc chung một form/hội thoại, tùy cấu hình.</td>
+          <td>Danh mục và trang sản phẩm tương ứng.</td>
+        </tr>
+        <tr>
+          <th>Ưu điểm</th>
+          <td>Làm rõ câu hỏi ngay trên ad; kỳ vọng giảm thao tác và khuyến khích bắt đầu trả lời.</td>
+          <td>Nhiều điểm vào; trình bày nhiều lựa chọn hoặc nội dung theo chuỗi.</td>
+          <td>Nối nội dung thu hút với việc khám phá và chọn sản phẩm.</td>
+        </tr>
+        <tr>
+          <th>Hạn chế</th>
+          <td>Cần kiểm chứng auto-swipe, khả năng giữ đáp án khi mở Form và chất lượng lead; ít thao tác chưa đồng nghĩa lead đủ điều kiện.</td>
+          <td>Card phía sau bị ẩn; khó so sánh đồng thời.</td>
+          <td>Cần quản lý danh mục, giá/tồn kho và tracking sản phẩm.</td>
+        </tr>
+        <tr>
+          <th>Ứng dụng tiềm năng</th>
+          <td>Form nhiều câu hỏi, bắt đầu bằng câu hỏi lựa chọn ngắn để xác định nhu cầu.</td>
+          <td>Bán lẻ, ô tô, bất động sản, du lịch, giáo dục, tài chính, B2B có nhiều lựa chọn.</td>
+          <td>Bán lẻ / e-commerce, thời trang, làm đẹp, nội thất và dịch vụ có danh mục.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<section id="thank-you" class="thank-you" aria-labelledby="thank-you-title"><div class="wrap">
+  <div class="thank-you-inner">
+    <div class="thank-kic">Ad Template Research · 2026-Q3</div>
+    <h2 id="thank-you-title">Thank you.</h2>
+    <p>Cảm ơn mọi người đã theo dõi. Mời trao đổi và đặt câu hỏi.</p>
+    <div class="thank-meta">Market &amp; Zalo Overview</div>
+  </div>
+</div></section>
+
+<div class="foot"><div class="wrap">
+  Ad Template Research · 2026-Q3 — <b>Market &amp; Zalo Overview</b>. Nguồn: ad-format-landscape.csv · carousel-measurement-insight · fillrate-matchrate-synthesis.
+</div></div>
+</main>
+</div>
+
+<script>
+const S04 = {"single-banner": [{"src": "present-site-assets/s04/single-banner/facebook-native-feed.png", "caption": "Facebook · Native Feed"}, {"src": "present-site-assets/s04/single-banner/facebook-reel.png", "caption": "Facebook · Reel"}, {"src": "present-site-assets/s04/single-banner/instagram-native-feed.png", "caption": "Instagram · Native Feed"}, {"src": "present-site-assets/s04/single-banner/instagram-story.png", "caption": "Instagram · Story"}, {"src": "present-site-assets/s04/single-banner/linkedin-feed.png", "caption": "LinkedIn · Feed"}, {"src": "present-site-assets/s04/single-banner/reddit-feed.png", "caption": "Reddit · Feed"}, {"src": "present-site-assets/s04/single-banner/threads-native-feed.png", "caption": "Threads · Native Feed"}, {"src": "present-site-assets/s04/single-banner/wechat-channel.png", "caption": "WeChat · Channel"}, {"src": "present-site-assets/s04/single-banner/x-feed.png", "caption": "X · Feed"}], "album": [{"src": "present-site-assets/s04/album/facebook-native-feed.png", "caption": "Facebook · Native Feed"}, {"src": "present-site-assets/s04/album/facebook-video-feed.png", "caption": "Facebook · Video Feed"}, {"src": "present-site-assets/s04/album/wechat-moment.png", "caption": "WeChat · Moment"}], "carousel": [{"src": "present-site-assets/s04/carousel/facebook-native-feed.png", "caption": "Facebook · Native Feed"}, {"src": "present-site-assets/s04/carousel/instagram-native-feed.png", "caption": "Instagram · Native Feed"}, {"src": "present-site-assets/s04/carousel/linkedin-native-feed.png", "caption": "LinkedIn · Native Feed"}, {"src": "present-site-assets/s04/carousel/threads-native-feed.png", "caption": "Threads · Native Feed"}, {"src": "present-site-assets/s04/carousel/wechat-channel.png", "caption": "WeChat · Channel"}, {"src": "present-site-assets/s04/carousel/x-native-feed.png", "caption": "X · Native Feed"}], "collection": [{"src": "present-site-assets/s04/collection/facebook-native-feed.png", "caption": "Facebook · Native Feed"}, {"src": "present-site-assets/s04/collection/instagram-native-feed.png", "caption": "Instagram · Native Feed"}, {"src": "present-site-assets/s04/collection/x-native-feed.png", "caption": "X · Native Feed"}], "video": [{"src": "present-site-assets/s04/video/facebook-native-feed.png", "caption": "Facebook · Native Feed"}, {"src": "present-site-assets/s04/video/facebook-reels.png", "caption": "Facebook · Reels"}, {"src": "present-site-assets/s04/video/facebook-story.png", "caption": "Facebook · Story"}, {"src": "present-site-assets/s04/video/instagram-native-feed.png", "caption": "Instagram · Native Feed"}, {"src": "present-site-assets/s04/video/instagram-story.png", "caption": "Instagram · Story"}, {"src": "present-site-assets/s04/video/instagram-video-feed.png", "caption": "Instagram · Video Feed"}, {"src": "present-site-assets/s04/video/tiktok-search.png", "caption": "TikTok · Search"}, {"src": "present-site-assets/s04/video/tiktok-video-feed-top-view.png", "caption": "TikTok · Video Feed - Top View"}, {"src": "present-site-assets/s04/video/wechat-channel.png", "caption": "WeChat · Channel"}], "interactive": [{"src": "present-site-assets/s04/interactive/pinterest-quiz.png", "caption": "Pinterest · Quiz"}, {"src": "present-site-assets/s04/interactive/tiktok-video-feed-vote.png", "caption": "TikTok · Video Feed — Vote"}, {"src": "present-site-assets/s04/interactive/wechat-moment-ip-character-breaks-frame.png", "caption": "WeChat · Moment — IP character breaks the frame"}, {"src": "present-site-assets/s04/interactive/wechat-moment-long-press-unlock-reward.png", "caption": "WeChat · Moment — Long-press to unlock reward"}, {"src": "present-site-assets/s04/interactive/wechat-moment-panoramic-360-pannable-image.png", "caption": "WeChat · Moment — Panoramic 360° pannable image"}, {"src": "present-site-assets/s04/interactive/wechat-moment-shake-randomised-prize.png", "caption": "WeChat · Moment — Shake for a randomised prize"}, {"src": "present-site-assets/s04/interactive/wechat-moment-swipe-unlock-reward.png", "caption": "WeChat · Moment — Swipe to unlock reward"}]};
+const LABELS = {
+ "all":"Tất cả","single-banner":"Single banner","album":"Album","carousel":"Carousel",
+ "collection":"Collection/Shopping","video":"Video","interactive":"Interactive"
+};
+const CONTENT_KEYS = ["single-banner","album","carousel","collection","video","interactive"];
+const ORDER = ["all",...CONTENT_KEYS];
+const tabsEl=document.getElementById('tabs'), gridEl=document.getElementById('grid');
+let active="all";
+function scrollGalleryToTop(sectionId){
+  const section=document.getElementById(sectionId);
+  if(!section)return;
+  const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  section.scrollIntoView({behavior,block:'start'});
+}
+function countOf(k){ return k==="all" ? CONTENT_KEYS.reduce((s,t)=>s+(S04[t]||[]).length,0) : (S04[k]||[]).length; }
+function itemsFor(k){
+  return k==="all"
+    ? CONTENT_KEYS.flatMap(t => (S04[t]||[]).map(it=>({...it,type:t})))
+    : (S04[k]||[]).map(it=>({...it,type:k}));
+}
+function render(){
+  const items=itemsFor(active);
+  gridEl.innerHTML = items.length
+    ? items.map(it=>{
+        const [plat,place]=it.caption.split(" · ");
+        const sub = active==="all" ? `${LABELS[it.type]} · ${place||""}` : (place||"");
+        return `<div class="card"><figure>
+          <img class="shot" loading="lazy" src="${it.src}" alt="${it.caption}">
+          <figcaption>${plat}<span>${sub}</span></figcaption>
+        </figure></div>`;
+      }).join("")
+    : `<div class="empty"><b>Chưa có ảnh cho ${LABELS[active]}</b>Bổ sung screenshot vào folder để hiển thị ở đây.</div>`;
+}
+tabsEl.innerHTML = ORDER.map(k=>
+  `<button class="tab" role="tab" data-k="${k}" aria-selected="${k===active}">${LABELS[k]}<span class="n">${countOf(k)}</span></button>`
+).join("");
+tabsEl.addEventListener('click',e=>{
+  const b=e.target.closest('.tab'); if(!b)return;
+  active=b.dataset.k;
+  [...tabsEl.children].forEach(t=>t.setAttribute('aria-selected', t.dataset.k===active));
+  render();
+  requestAnimationFrame(()=>scrollGalleryToTop('s04'));
+});
+render();
+
+/* ---- Floating navigation scroll state ---- */
+(function(){
+  const links=[...document.querySelectorAll('.nav a[href^="#"]')];
+  const ids=[...new Set(links.map(link=>link.hash.slice(1)))];
+  const targets=ids.map(id=>document.getElementById(id)).filter(Boolean);
+  if(!links.length||!targets.length)return;
+  let queued=false;
+  const update=()=>{
+    const marker=window.scrollY+(window.innerHeight*.32);
+    let current=targets[0];
+    targets.forEach(target=>{if(target.offsetTop<=marker)current=target;});
+    links.forEach(link=>{
+      if(link.hash===`#${current.id}`)link.setAttribute('aria-current','true');
+      else link.removeAttribute('aria-current');
+    });
+    queued=false;
+  };
+  window.addEventListener('scroll',()=>{
+    if(queued)return;
+    queued=true;
+    requestAnimationFrame(update);
+  },{passive:true});
+  window.addEventListener('resize',update);
+  update();
+})();
+
+/* ---- S05 Figma phone images (base64, embedded) ---- */
+const S05IMG = {"tk1-story-a": "present-site-assets/s05/tk1-story-a.png", "tk1-story-b": "present-site-assets/s05/tk1-story-b.png", "tk1-feed-a": "present-site-assets/s05/tk1-feed-a.png", "tk1-feed-b": "present-site-assets/s05/tk1-feed-b.png", "tk2-p1": "present-site-assets/s05/tk2-p1.png", "tk2-p2": "present-site-assets/s05/tk2-p2.png", "tk2-p3": "present-site-assets/s05/tk2-p3.png", "tk2-p4": "present-site-assets/s05/tk2-p4.png", "tk3-p1": "present-site-assets/s05/tk3-p1.png", "tk3-p2": "present-site-assets/s05/tk3-p2.png", "tk3-p3": "present-site-assets/s05/tk3-p3.png"};
+document.querySelectorAll('img[data-s05]').forEach(im=>{const k=im.getAttribute('data-s05');if(S05IMG[k])im.src=S05IMG[k];});
+
+/* ---- Image/video flip cards ---- */
+(function(){
+  document.querySelectorAll('[data-flip-card]').forEach(card=>{
+    const button=card.querySelector('.flip-action');
+    const front=card.querySelector('.flip-front');
+    const back=card.querySelector('.flip-back');
+    const video=card.querySelector('video');
+    if(!button||!front||!back||!video)return;
+    back.inert=true;
+    video.tabIndex=-1;
+    button.addEventListener('click',()=>{
+      const flipped=!card.classList.contains('is-flipped');
+      card.classList.toggle('is-flipped',flipped);
+      button.setAttribute('aria-pressed',String(flipped));
+      button.textContent=flipped?'↺ Xem ảnh':'↻ Xem video';
+      front.setAttribute('aria-hidden',String(flipped));
+      back.setAttribute('aria-hidden',String(!flipped));
+      front.inert=flipped;
+      back.inert=!flipped;
+      video.tabIndex=flipped?0:-1;
+      if(flipped){
+        if(video.readyState===0)video.load();
+        video.play().catch(()=>{});
+      }else video.pause();
+    });
+  });
+})();
+
+/* ---- Performance data note popover ---- */
+(function(){
+  const trigger=document.querySelector('.data-note-link');
+  const popover=document.getElementById('performance-data-popover');
+  const closeBtn=popover?.querySelector('.data-popover-close');
+  if(!trigger||!popover||!closeBtn)return;
+  const close=()=>{popover.hidden=true;trigger.setAttribute('aria-expanded','false');};
+  const open=()=>{popover.hidden=false;trigger.setAttribute('aria-expanded','true');closeBtn.focus();};
+  trigger.addEventListener('click',()=>popover.hidden?open():close());
+  closeBtn.addEventListener('click',()=>{close();trigger.focus();});
+  document.addEventListener('click',e=>{if(!popover.hidden&&!e.target.closest('.data-note'))close();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!popover.hidden){close();trigger.focus();}});
+})();
+
+/* ---- Carousel measurement popovers ---- */
+(function(){
+  const triggers=[...document.querySelectorAll('.measure-link[aria-controls]')];
+  const closeAll=except=>{
+    triggers.forEach(trigger=>{
+      const panel=document.getElementById(trigger.getAttribute('aria-controls'));
+      if(panel&&panel!==except){panel.hidden=true;trigger.setAttribute('aria-expanded','false');}
+    });
+  };
+  triggers.forEach(trigger=>{
+    const panel=document.getElementById(trigger.getAttribute('aria-controls'));
+    const closeBtn=panel?.querySelector('.measure-popover-close');
+    if(!panel||!closeBtn)return;
+    const positionPanel=()=>{
+      const block=trigger.closest('.measure-block');
+      if(!block)return;
+      const triggerRect=trigger.getBoundingClientRect();
+      const blockRect=block.getBoundingClientRect();
+      panel.style.top=`${triggerRect.bottom-blockRect.top+12}px`;
+    };
+    trigger.addEventListener('click',()=>{
+      const willOpen=panel.hidden;
+      closeAll(willOpen?panel:null);
+      panel.hidden=!willOpen;
+      trigger.setAttribute('aria-expanded',String(willOpen));
+      if(willOpen){positionPanel();closeBtn.focus();}
+    });
+    window.addEventListener('resize',()=>{if(!panel.hidden)positionPanel();});
+    closeBtn.addEventListener('click',()=>{
+      panel.hidden=true;
+      trigger.setAttribute('aria-expanded','false');
+      trigger.focus();
+    });
+  });
+  document.addEventListener('click',event=>{
+    if(!event.target.closest('.measure-block'))closeAll();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    const openTrigger=triggers.find(trigger=>trigger.getAttribute('aria-expanded')==='true');
+    if(!openTrigger)return;
+    closeAll();
+    openTrigger.focus();
+  });
+})();
+
+/* ---- Recommendation explanation tooltips ---- */
+(function(){
+  const triggers=[...document.querySelectorAll('.rec-tip-trigger[aria-controls]')];
+  const state=new Map(triggers.map(trigger=>[trigger,{pinned:false}]));
+  const getPanel=trigger=>document.getElementById(trigger.getAttribute('aria-controls'));
+  const close=trigger=>{
+    const panel=getPanel(trigger);
+    if(!panel)return;
+    panel.hidden=true;
+    trigger.setAttribute('aria-expanded','false');
+    state.get(trigger).pinned=false;
+  };
+  const closeAll=except=>triggers.forEach(trigger=>{if(trigger!==except)close(trigger);});
+  const positionPanel=trigger=>{
+    const panel=getPanel(trigger);
+    if(!panel||panel.hidden)return;
+    const margin=16;
+    const gap=10;
+    panel.style.visibility='hidden';
+    panel.style.left=`${margin}px`;
+    panel.style.top=`${margin}px`;
+    const triggerRect=trigger.getBoundingClientRect();
+    const panelRect=panel.getBoundingClientRect();
+    const centeredLeft=triggerRect.left+(triggerRect.width-panelRect.width)/2;
+    const maxLeft=Math.max(margin,window.innerWidth-panelRect.width-margin);
+    const left=Math.min(Math.max(margin,centeredLeft),maxLeft);
+    const below=triggerRect.bottom+gap;
+    const above=triggerRect.top-panelRect.height-gap;
+    const preferredTop=below+panelRect.height<=window.innerHeight-margin?below:above;
+    const maxTop=Math.max(margin,window.innerHeight-panelRect.height-margin);
+    const top=Math.min(Math.max(margin,preferredTop),maxTop);
+    panel.style.left=`${Math.round(left)}px`;
+    panel.style.top=`${Math.round(top)}px`;
+    panel.style.visibility='visible';
+  };
+  const open=trigger=>{
+    const panel=getPanel(trigger);
+    if(!panel)return;
+    closeAll(trigger);
+    panel.hidden=false;
+    trigger.setAttribute('aria-expanded','true');
+    positionPanel(trigger);
+  };
+  triggers.forEach(trigger=>{
+    const wrap=trigger.closest('.rec-tip-wrap');
+    const panel=getPanel(trigger);
+    if(!wrap||!panel)return;
+    wrap.addEventListener('pointerenter',()=>open(trigger));
+    wrap.addEventListener('pointerleave',()=>{if(!state.get(trigger).pinned)close(trigger);});
+    trigger.addEventListener('focus',()=>open(trigger));
+    trigger.addEventListener('blur',event=>{
+      if(!wrap.contains(event.relatedTarget)&&!state.get(trigger).pinned)close(trigger);
+    });
+    trigger.addEventListener('click',event=>{
+      event.stopPropagation();
+      const willPin=!state.get(trigger).pinned;
+      if(willPin){open(trigger);state.get(trigger).pinned=true;}
+      else close(trigger);
+    });
+  });
+  document.addEventListener('click',event=>{
+    if(!event.target.closest('.rec-tip-wrap'))closeAll();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.key!=='Escape')return;
+    const openTrigger=triggers.find(trigger=>trigger.getAttribute('aria-expanded')==='true');
+    if(!openTrigger)return;
+    closeAll();
+    openTrigger.focus();
+  });
+  const positionOpenPanels=()=>triggers.forEach(trigger=>{
+    if(trigger.getAttribute('aria-expanded')==='true')positionPanel(trigger);
+  });
+  window.addEventListener('resize',positionOpenPanels);
+  window.addEventListener('scroll',positionOpenPanels,{passive:true});
+})();
+
+/* ---- Recommendation image zoom ---- */
+(function(){
+  const dialog=document.getElementById('rec-image-zoom');
+  const zoomImage=document.getElementById('rec-image-zoom-img');
+  const caption=document.getElementById('rec-image-zoom-caption');
+  const closeButton=dialog?.querySelector('.image-zoom-close');
+  const triggers=[...document.querySelectorAll('.rec-zoom-trigger')];
+  if(!dialog||!zoomImage||!caption||!closeButton||!triggers.length)return;
+  let activeTrigger=null;
+  triggers.forEach(trigger=>trigger.addEventListener('click',()=>{
+    activeTrigger=trigger;
+    zoomImage.src=trigger.dataset.zoomSrc;
+    zoomImage.alt=trigger.dataset.zoomAlt;
+    caption.textContent=trigger.closest('figure')?.querySelector('figcaption')?.textContent||trigger.dataset.zoomAlt;
+    dialog.showModal();
+  }));
+  closeButton.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+  dialog.addEventListener('close',()=>activeTrigger?.focus());
+})();
+
+/* ---- Zalo Ads Template gallery ---- */
+const ZALO = {
+  "single-banner": [
+    {"src": "present-site-assets/zalo/single-banner/mp3-masthead.png", "caption": "MP3 · Masthead"},
+    {"src": "present-site-assets/zalo/single-banner/mp3-welcome.png", "caption": "MP3 · Welcome"},
+    {"src": "present-site-assets/zalo/single-banner/zalo-inbox.png", "caption": "Zalo · Inbox"},
+    {"src": "present-site-assets/zalo/single-banner/zalo-native-feed.png", "caption": "Zalo · Native Feed"},
+    {"src": "present-site-assets/zalo/single-banner/zalo-story.png", "caption": "Zalo · Story"},
+    {"src": "present-site-assets/zalo/single-banner/zalo-video-feed.png", "caption": "Zalo · Video Feed"}
+  ],
+  "album": [
+    {"src": "present-site-assets/zalo/album/baomoi-wap-sub-bottom.png", "caption": "BaoMoi WAP · Sub bottom"},
+    {"src": "present-site-assets/zalo/album/baomoi-app-sub-bottom.png", "caption": "BaoMoi App · Sub bottom"},
+    {"src": "present-site-assets/zalo/album/zalo-native-feed-5-images.png", "caption": "Zalo · Native Feed — 5 ảnh"},
+    {"src": "present-site-assets/zalo/album/zalo-native-feed-4-images.png", "caption": "Zalo · Native Feed — 4 ảnh"}
+  ],
+  "carousel": [
+    {"src": "present-site-assets/zalo/carousel/baomoi-sub-bottom.png", "caption": "Baomoi · Sub bottom"},
+    {"src": "present-site-assets/zalo/carousel/zalo-native-feed.png", "caption": "Zalo · Native Feed"},
+    {"src": "present-site-assets/zalo/carousel/zalo-video-tab.png", "caption": "Zalo · Video Tab"}
+  ],
+  "video": [
+    {"src": "present-site-assets/zalo/video/baomoi-sub-bottom.png", "caption": "BaoMoi · Sub bottom"},
+    {"src": "present-site-assets/zalo/video/zalo-native-feed.png", "caption": "Zalo · Native Feed"},
+    {"src": "present-site-assets/zalo/video/zalo-video-feed.png", "caption": "Zalo · Video Feed"},
+    {"src": "present-site-assets/zalo/video/zalo-video-tab.png", "caption": "Zalo · Video tab"}
+  ]
+};
+(function(){
+  const LBL={all:"Tất cả","single-banner":"Single banner",album:"Album",carousel:"Carousel",video:"Video"};
+  const KEYS=["single-banner","album","carousel","video"], ORD=["all",...KEYS];
+  const tabsEl=document.getElementById('ztabs'),gridEl=document.getElementById('zgrid');
+  if(!tabsEl)return; let active="all";
+  const cnt=k=>k==="all"?KEYS.reduce((s,t)=>s+(ZALO[t]||[]).length,0):(ZALO[k]||[]).length;
+  const items=k=>k==="all"?KEYS.flatMap(t=>(ZALO[t]||[]).map(it=>({...it,type:t}))):(ZALO[k]||[]).map(it=>({...it,type:k}));
+  function render(){const its=items(active);
+    gridEl.innerHTML=its.length?its.map(it=>{const[p,pl]=it.caption.split(" · ");const sub=active==="all"?`${LBL[it.type]} · ${pl||""}`:(pl||"");
+      return `<div class="card"><figure><img class="shot" loading="lazy" src="${it.src}" alt="${it.caption}"><figcaption>${p}<span>${sub}</span></figcaption></figure></div>`;}).join("")
+      :`<div class="empty"><b>Chưa có ảnh cho ${LBL[active]}</b>Bổ sung screenshot vào folder để hiển thị.</div>`;}
+  tabsEl.innerHTML=ORD.map(k=>`<button class="tab" role="tab" data-k="${k}" aria-selected="${k===active}">${LBL[k]}<span class="n">${cnt(k)}</span></button>`).join("");
+  tabsEl.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;active=b.dataset.k;[...tabsEl.children].forEach(t=>t.setAttribute('aria-selected',t.dataset.k===active));render();requestAnimationFrame(()=>scrollGalleryToTop('zalo-templates'));});
+  render();
+})();
+</script>
+</body>
+</html>
